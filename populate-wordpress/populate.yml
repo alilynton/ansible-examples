@@ -1,0 +1,23 @@
+- name: Configure Wordpress
+  hosts: wordpress-server
+  remote_user: root
+  # remote_user: user
+  # sudo: yes
+
+  tasks:
+  - name: Clone the repo
+    git:
+      repo: https://github.com/alilynton/
+      version: master
+      dest: /opt/assets
+      accept_hostkey: yes
+  - name: extract the .tar.gz
+    unarchive: 
+      src: /opt/assets/ansible-examples/populate-wordpress/wordpress.tar.gz
+      dest: /opt/assets/wordpress
+      remote_src: yes
+  - name: place the files
+    copy: src=/opt/assets/wordpress/wp-content/uploads/2020 dst=/srv/wordpress/wp-content/uploads/2020
+
+  - name: load the sql
+    shell: mysql < /opt/assets/wordpress/wordpress.sql
