@@ -5,6 +5,14 @@
   # sudo: yes
 
   tasks:
+  - name: Make the dirs
+    file:
+      path: /opt/assets
+      state: directory
+  - name: Make the dirs 2
+    file:
+      path: /opt/assets/wordpress
+      state: directory
   - name: Clone the repo
     git:
       repo: https://github.com/alilynton/ansible-examples.git
