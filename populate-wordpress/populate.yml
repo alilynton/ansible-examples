@@ -27,8 +27,8 @@
   - name: place the files
     copy: 
       src: /opt/assets/wordpress/wp-content/uploads/2020 
-      dest: /srv/wordpress/wp-content/uploads/2020
+      dest: /srv/wordpress/wordpress/wp-content/uploads/2020
       remote_src: yes
 
   - name: load the sql
-    shell: mysql < /opt/assets/wordpress/wordpress.sql
+    shell: mysql < /opt/assets/wordpress/wordpress/wordpress.sql
