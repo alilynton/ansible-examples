@@ -21,7 +21,7 @@
       accept_hostkey: yes
   - name: extract the .tar.gz
     unarchive: 
-      src: /opt/assets/ansible-examples/populate-wordpress/wordpress.tar.gz
+      src: /opt/assets/populate-wordpress/wordpress.tar.gz
       dest: /opt/assets/wordpress
       remote_src: yes
   - name: place the files
