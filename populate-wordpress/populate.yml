@@ -7,7 +7,7 @@
   tasks:
   - name: Clone the repo
     git:
-      repo: https://github.com/alilynton/
+      repo: https://github.com/alilynton/ansible-examples.git
       version: master
       dest: /opt/assets
       accept_hostkey: yes
