@@ -26,8 +26,8 @@
       remote_src: yes
   - name: place the files
     copy: 
-      src: /opt/assets/wordpress/wordpress/wp-content/uploads/2020 
-      dest: /srv/wordpress/wp-content/uploads/2020
+      src: /opt/assets/wordpress/wordpress/wp-content/
+      dest: /srv/wordpress/wp-content/
       remote_src: yes
 
   - name: load the sql
