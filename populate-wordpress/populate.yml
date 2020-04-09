@@ -5,6 +5,8 @@
   # sudo: yes
 
   tasks:
+  - name: Clean up previous run with a hammer
+    shell: rm -rf /opt/assets
   - name: Make the dirs
     file:
       path: /opt/assets
